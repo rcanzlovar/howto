@@ -2,28 +2,34 @@
 # ansible cookbook
 
 
-##To do an ad hoc apt install on one host
+## To do an ad hoc apt install on one host
 
+```
  ansible webserver2 -m apt -a "name=frotz state=present" -i hosts.ini -u remoteuser --become 
+```
 
 ## to give a host a name when it's being defined in the ansible hosts file: 
 
 
+```
 [aws]
 webserver01 ansible_host=54.175.15.243 ansible_ssh_private_key_file=~/.ssh/MyKeyPair.pem ansible_user=ec2-user
 
 webserver2 ansible_host=54.89.102.139 ansible_ssh_private_key_file=~/.ssh/firstvpc.pem ansible_user=ubuntu
 
+```
 
-#
-# It should live in /etc/ansible/hosts
-#
-#   - Comments begin with the '#' character
-#   - Blank lines are ignored
-#   - Groups of hosts are delimited by [header] elements
-#   - You can enter hostnames or ip addresses
-#   - A hostname/ip can be a member of multiple groups
+# where is hosts.ini
 
+ It should live in /etc/ansible/hosts
+
+   - Comments begin with the '#' character
+   - Blank lines are ignored
+   - Groups of hosts are delimited by [header] elements
+   - You can enter hostnames or ip addresses
+   - A hostname/ip can be a member of multiple groups
+
+```
 # lan includes the ubuntu systems. 
 [colossus] 
 192.168.23.93
@@ -103,4 +109,5 @@ webserver2 ansible_host=54.89.102.139 ansible_ssh_private_key_file=~/.ssh/firstv
 
 #db-[99:101]-node.example.com
 
+```
 
