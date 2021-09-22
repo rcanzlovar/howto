@@ -11,3 +11,5 @@ Assuming you have a Firefox account download the Firefox For Developer mobile ap
 * Go back to Firefox For Developer browser, and in Custom Add-on Collections, add the string of code you copied before in Collection owner(User ID) and MyPhone in Collection name.
 * Now on Custom Add-on, you will have Tampermonkey and any browser extension you want to install on your phone by just saving it as your collection for install later.
 * As your final step add a custom User-Agent script to Tampermoneky, and you will be ready to use Inspect Element and View Source code.
+
+https://medium.com/geekculture/how-i-hacked-a-hotel-just-using-my-phone-97f4d2de39ca
