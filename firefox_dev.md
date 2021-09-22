@@ -2,7 +2,7 @@
 
 Although I didn't want this to be a tutorial, I still want to teach you guys how to get these features on your mobile, in case you need them, because sometimes computers are not an option.
 Assuming you have a Firefox account download the Firefox For Developer mobile application
-##Steps
+## Steps
 * Go to settings > About Firefox > Click the Firefox Browser logo 7 times.
 * Now you will see Secret Settings, Secret Debug Info, and Custom Add-on Collections.
 * Using your regular phone browser, go to your Firefox account using Desktop mode > Add-ons > Collections.
