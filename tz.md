@@ -1,6 +1,12 @@
-# `tzdata Timezone`
+# Change the time zone
+
+Run `dpkg-reconfigure tzdata` if you wish to change it.
+
+
+```
+$ sudo dpkg-reconfigure tzdata
 
 Current default time zone: 'America/Denver'
-Local time is now:      Sat Feb  8 20:42:01 MST 2020.
-Universal Time is now:  Sun Feb  9 03:42:01 UTC 2020.
-Run `dpkg-reconfigure tzdata` if you wish to change it.
+Local time is now:      Tue May  3 23:14:15 MDT 2022.
+Universal Time is now:  Wed May  4 05:14:15 UTC 2022.
+```
