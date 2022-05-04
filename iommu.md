@@ -1,9 +1,8 @@
 # iommu PCI-E sharing to VMs
 
-need to make sure the CPU supports it, the motherboard supports it, and you have it 
-enabled in the BIOS. it might be called VT-d 
-
-
+- need to make sure the CPU supports it. Go to Advanced - CPU information, make sure Intel Virtualization is turned on. 
+- Go to Advanced System Agent Configuration
+If enabled, there should be an option for VT-d. Enable it. 
 - /etc/default/grub
 if it's and AMD, it'll be `amd_iommu=on`
 ```
