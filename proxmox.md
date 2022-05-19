@@ -1,10 +1,6 @@
 # proxmox - open source virtualization
 
-
-
 ## creating a vm
-
-
 
 ## templating
 
@@ -48,7 +44,5 @@ comment out the line
 deb https://enterprise.proxmox.com/debian/pve bullseye pve-enterprise
 
 3. turn on iommu
-
-
 
 
