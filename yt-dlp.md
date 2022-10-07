@@ -10,3 +10,32 @@ yt-dlp also have --break-on-existing and --break-on-reject and --break-per-input
 with yt-dlp, use -P downloads
 
 with youtube-dl, use -o "downloads/%(title)s %(id)s.%(ext)s"
+
+
+download a list, put the file in a dir along with some subtitles
+```
+yt-dlp -f 'bv+ba' \
+    -o '%(title)s.%(ext)s' \
+    -o '%(title)s/%(title)s.%(ext)s' 
+    --write-subs \
+    --sub-format "srt" \
+    --sub-langs "en,fr" \
+    --download-archive archive.txt \
+    https://www.youtube.com/playlist?list=OLAK5uy_mAvJkmTs2Ag0vsCrzX-iFq7O3v038jJdI 
+
+yt-dlp -f 'bv+ba' https://www.youtube.com/playlist?list=OLAK5uy_mAvJkmTs2Ag0vsCrzX-iFq7O3v038jJdI -o '%(title)s/%(title)s.%(ext)s' --write-subs --sub-format "srt" --sub-langs "en,fr" --download-archive archive.txt 
+```
+
+
+Download a list and save as MP3s 
+```
+yt-dlp --ignore-errors \
+    --format bestaudio \
+    --extract-audio \
+    --audio-format mp3 \
+    --audio-quality 160K \
+    --output "%(title)s.%(ext)s" \
+    --yes-playlist \
+    https://www.youtube.com/playlist?list=OLAK5uy_mAvJkmTs2Ag0vsCrzX-iFq7O3v038jJdI
+```
+
