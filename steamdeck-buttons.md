@@ -1,5 +1,6 @@
 # Button shortcuts
 
+default 
 
 * STEAM + B = Force Game Shutdown
 * STEAM + X = Show Keyboard
