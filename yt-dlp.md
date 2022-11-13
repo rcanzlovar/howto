@@ -39,3 +39,11 @@ yt-dlp --ignore-errors \
     https://www.youtube.com/playlist?list=OLAK5uy_mAvJkmTs2Ag0vsCrzX-iFq7O3v038jJdI
 ```
 
+
+### get the title and id of videos from a channel starting with oldest. 
+```
+ yt-dlp -s --get-title --playlist-reverse "https://www.youtube.com/c/PhillyGoldenTeacher" --get-id >> PGT.txt
+
+/https:\/\/www.youtube.com\/watch?v=${id}
+```
+

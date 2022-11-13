@@ -1,7 +1,5 @@
 # running distrobox under steam deck
 
-
-
 https://www.youtube.com/watch?v=kkkyNA31KOA
 
 Installers:
@@ -35,3 +33,4 @@ distrobox enter ubuntu-20-04
 Now you can do things like apt. 
 
 Systemctl seems to be a miss
+
