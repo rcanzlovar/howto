@@ -9,3 +9,7 @@ youtube-dl https://www.youtube.com/watch?v=1BseBCzOh6s --format bestvideo+bestau
 
 will download the movie at the highest video and audio format and will leave the original .m4a audio file and a .mkv video file, and will convert to a MP4 of really nice quality. You can probably add -k if you don't want it to delete the two files before the merge.
 
+yt-dlp
+
+
+./yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" 

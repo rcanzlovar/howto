@@ -39,6 +39,9 @@ yt-dlp --ignore-errors \
     https://www.youtube.com/playlist?list=OLAK5uy_mAvJkmTs2Ag0vsCrzX-iFq7O3v038jJdI
 ```
 
+https://write.corbpie.com/downloading-youtube-videos-as-audio-with-yt-dlp/
+yt-dlp -f 'ba' -x --audio-format mp3 https://www.youtube.com/watch?v=dQw4w9WgXcQ  -o '%(id)s.%(ext)s'
+
 
 ### get the title and id of videos from a channel starting with oldest. 
 ```
