@@ -50,3 +50,14 @@ yt-dlp -f 'ba' -x --audio-format mp3 https://www.youtube.com/watch?v=dQw4w9WgXcQ
 /https:\/\/www.youtube.com\/watch?v=${id}
 ```
 
+### download all the videos on a channel 
+
+It seems like now, the intended way to download all the content from a channel is to use the full channel url with no specific tab.
+
+So you'd download with the urls:
+
+https://www.youtube.com/c/{channelName}
+https://www.youtube.com/channel/{channelId}
+https://www.youtube.com/@{userName}
+
+What will happen is yt-dlp will treat this specially and download the videos, live and shorts tabs separately. If you wanted go back to the previous behavior and download the channel's featured videos, you'd have to download the featured tab directly.
