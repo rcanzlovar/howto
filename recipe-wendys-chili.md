@@ -9,7 +9,8 @@ pitone beef strained
 i large onion
 1/2 cup diced celery
 1/4 cup diced green pepper
-1/4 cup chili powder1 tsp cumin powder
+1/4 cup chili powder
+]1 tsp cumin powder
 1.5 tsp garlic powder
 1 tsp salt
 1/2 tsp pepper
