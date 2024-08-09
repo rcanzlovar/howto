@@ -6,7 +6,7 @@ quart tomato juice
 can of tomato puree
 15 ounces red beans strained
 pitone beef strained
-i large onion
+1 large onion
 1/2 cup diced celery
 1/4 cup diced green pepper
 1/4 cup chili powder
@@ -16,7 +16,7 @@ i large onion
 1/2 tsp pepper
 1/2 tsp  oregano
 1/2 tsp  sugar
-8 tsp cayenne peooer
+8 tsp cayenne pepper
 
 
 

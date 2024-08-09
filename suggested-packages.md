@@ -11,3 +11,22 @@ Suggested packages:
   tasksel mate-xapp-status-applet
 Recommended packages:
   libgtk2-perl pidgin-libnotify
+
+
+
+$ sudo apt install gparted 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  gparted-common libparted-fs-resize0
+Suggested packages:
+  dmraid gpart jfsutils mtools reiser4progs reiserfsprogs udftools exfatprogs
+  libparted-dev
+The following NEW packages will be installed:
+  gparted gparted-common libparted-fs-resize0
+0 upgraded, 3 newly installed, 0 to remove and 7 not upgraded.
+Need to get 519 kB of archives.
+After this operation, 2,245 kB of additional disk space will be used.
+Do you want to continue? [Y/n] 
+

@@ -12,3 +12,16 @@ Ingredients
 -  ¼ teaspoon dried oregano
 
 mix together, put in a sealed container. 
+
+
+
+2 tbsp chili powder
+4 tsp cumin
+2 tsp coriander
+1 tsp smoked paprika
+1 tsp garlic powder
+1 tsp onion powder
+1 tsp salt
+1/2 tsp black pepper 
+1 tsp oregano
+

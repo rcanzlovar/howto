@@ -1,6 +1,7 @@
 # yt-dlp replaced youtube-dl
 
 
+
 ### how to limit by date on a channel 
 yes, --dateafter 20211231 but you should combine it with --download-archive FILE to easily skip previously downloaded files (useful for the next time you want to update...) and --playlist-end X where X is a suitable number, because otherwise, it will have to check the date on each video all the way to the first video on the channel.
 
@@ -61,3 +62,16 @@ https://www.youtube.com/channel/{channelId}
 https://www.youtube.com/@{userName}
 
 What will happen is yt-dlp will treat this specially and download the videos, live and shorts tabs separately. If you wanted go back to the previous behavior and download the channel's featured videos, you'd have to download the featured tab directly.
+
+
+
+## get a members-only list
+If you're using Firefox: yt-dlp https://www.youtube.com/watch?v=hoJcUgIUsWM&list=PLMrhRWnM8ZIovsCfnnRygPKV8VtZHsJNR --cookies-from-browser firefox
+
+If you're using Chrome: yt-dlp https://www.youtube.com/watch?v=hoJcUgIUsWM&list=PLMrhRWnM8ZIovsCfnnRygPKV8VtZHsJNR --cookies-from-browser chrome
+
+If you're using something else I'd imagine Microsoft Edge would just be "edge"
+
+That should work, if not I'd recommend reading through the cookies section of the wiki: https://old.reddit.com/r/youtubedl/wiki/cookies
+
+Ideally, the URL should always be the last argument passed
