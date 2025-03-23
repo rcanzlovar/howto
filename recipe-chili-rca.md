@@ -1,26 +1,31 @@
+---
+title: Composite chili recipe
+date: 2024-06-10
+published: true
+---
+
 # wendys bucket of chili
 
 
-2#$ ground beef
-quart tomato juice 
-can of tomato puree
-15 ounces red beans strained
-pitone beef strained
-optional can of corn drained
+* 2 pounds ground beef
+* quart tomato juice 
+* can of tomato puree
+* 15 ounces red beans strained
+* optional can of corn drained
 
 Seasonings:
 
-1 large onion
-1/2 cup diced celery (or celery seed) 
-1/4 cup diced green pepper
-1/4 cup chili powder
-1 tsp cumin powder
-1.5 tsp garlic powder
-1 tsp salt
-1/2 tsp pepper
-1/2 tsp oregano
-1/2 tsp sugar
-8 tsp cayenne pepper
+* 1 large onion
+* 1/2 cup diced celery (or celery seed) 
+* 1/4 cup diced green pepper
+* 1/4 cup chili powder
+* 1 tsp cumin powder
+* 1.5 tsp garlic powder
+* 1 tsp salt
+* 1/2 tsp pepper
+* 1/2 tsp oregano
+* 1/2 tsp sugar
+* 8 tsp cayenne pepper
 
 
 

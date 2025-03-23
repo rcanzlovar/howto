@@ -1,6 +1,10 @@
+---
+title: How to make McChicken 
+date: 2024-04-09
+published: true
+---
 
-
-
+From Jordan The Stallion
 
 ## Patties
 In a bowl, add
@@ -10,9 +14,6 @@ In a bowl, add
 - soy sauce
 mix
 Make into patties, on parchment, freeze for 30-60
-
-
-
 
 
 ## tempura

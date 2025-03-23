@@ -1,17 +1,26 @@
+---
+title: Salted Caramel Rice Krispie Treats
+date: 2024-05-05
+published: true
+---
+
 # Salted Caramel Rice Krispie Treats
 
 Salted Caramel Rice Krispie Treats
 
 Gourmet Salted Caramel Crispy Bars
+
 ## Ingredients:
-• 4 1/2 cups mini marshmallows
-• 3 tablespoons butter
-• 6 cups Rice Krispies cereal
-• 11 ounces Kraft caramels, unwrapped
-• 2 tablespoons milk
-• Coarse sea salt, for sprinkling
+
+* 4 1/2 cups mini marshmallows
+* 3 tablespoons butter
+* 6 cups Rice Krispies cereal
+* 11 ounces Kraft caramels, unwrapped
+* 2 tablespoons milk
+* Coarse sea salt, for sprinkling
 
 ## Directions:
+
 1. Grease a 9x13-inch glass baking dish with non-stick cooking spray and set it aside.
 2. In a big microwave-safe bowl, put the butter and marshmallows together. Pop it in the microwave on high for about 1 minute and 15 seconds until the marshmallows are all melty and puffy. Stir it until it's all smooth.
 3. Mix up the melted marshmallows with the Rice Krispies cereal in another big bowl. Press that mix nice and even into your prepared dish.

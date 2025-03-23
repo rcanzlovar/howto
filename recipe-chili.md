@@ -1,22 +1,28 @@
+---
+title: Chili Recipe #1
+date: 2024-04-21
+published: true
+---
+
 
 Ingredients
-2 tablespoons olive oil
-2 pounds ground beef
-2 stalks celery, chopped
-1 onion, chopped
-1 green bell pepper, chopped
-3 (14 ounce) cans stewed tomatoes
-1 (14 ounce) can tomato sauce
-1 (10 ounce) can diced tomatoes with green chiles (such as ROTEL)
-1 cup water
-2 (1.25 ounce) packages chili seasoning (such as McCormick® Mild Chili Seasoning Mix)
-1 (14 ounce) can kidney beans, undrained
-1 (14 ounce) can pinto beans, undrained
-salt and ground black pepper to taste
+* 2 tablespoons olive oil
+* 2 pounds ground beef
+* 2 stalks celery, chopped
+* 1 onion, chopped
+* 1 green bell pepper, chopped
+* 3 (14 ounce) cans stewed tomatoes
+* 1 (14 ounce) can tomato sauce
+* 1 (10 ounce) can diced tomatoes with green chiles (such as ROTEL)
+* 1 cup water
+* 2 (1.25 ounce) packages chili seasoning (such as McCormick® Mild Chili Seasoning Mix)
+* 1 (14 ounce) can kidney beans, undrained
+* 1 (14 ounce) can pinto beans, undrained
+* salt and ground black pepper to taste
 
-1 tablespoon white vinegar, or more to taste
+* 1 tablespoon white vinegar, or more to taste
 
-Directions
+## Directions
 Heat olive oil in a large pot over medium-high heat. Press ground beef into the hot oil to form one large patty; let the bottom brown, 8 to 10 minutes.
 
 Stir and break browned beef into crumbles. Continue to cook until no longer pink, about 5 minutes longer.

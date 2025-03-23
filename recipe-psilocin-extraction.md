@@ -1,4 +1,10 @@
-# psilocin-extraction
+---
+title: Psilocin extraction
+date: 2024-02-14
+published: true
+---
+
+# psilocin extraction
 
 
 Items needed
@@ -28,4 +34,5 @@ Take your psilocin water in your 250ml flask and start mixing on the magnet mixe
 ## Step 3 filtering and washing
 
 Filter the water and solids through the beaker filter pump and funnel system. Using stone cold distilled water. Wash off any excess acetylation water. Using a clean stainless steel foot tool break up the product on the filter pad while the product is being vacuumed pulling out excess moisture.
+
 One thing I learned was you should apply a acid scavenger to neutralize the acid. It would be added before you add the Acetyl chloride. Acetyl chloride reacts with water and acids making a off gassing you would need a face mask and eye protection as I said well ventilated. But the proton scavenger is actually also called acid scavenger. It neutralizes the acid in a liquid it’s commonly solid online. You would add a small amount of the acid scavenger to neutralize the PH of the mixture. Then add Acetyl chloride to mixture for the acetylation process of making a stable form of psilocin 4acodmt.

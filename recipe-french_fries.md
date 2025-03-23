@@ -1,8 +1,14 @@
+---
+title: Making French Fries like a restaurant 
+date: 2024-04-09
+published: true
+---
+
 # making fries like a restaurant 
 
-cut potatoes. 
+Cut potatoes. 
 
-soak in water, changing water until it comes clear. 
+Soak in water, changing water until it comes clear. 
 
 Freeze them. 
 

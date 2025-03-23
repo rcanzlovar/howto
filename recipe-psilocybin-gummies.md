@@ -1,4 +1,10 @@
-# Blu’s Gummy recipe and Tea Tek
+---
+title: Blu's Gummy recipe and Tea Tek
+date: 2024-06-10
+published: true
+---
+
+# Blu's Gummy recipe and Tea Tek
 
 
 ## Gummy Ingredients 

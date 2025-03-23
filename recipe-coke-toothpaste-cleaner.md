@@ -1,6 +1,11 @@
-# recipe for cleaning solution to remove burned stuff from pans
-From Youtube https://www.youtube.com/watch?v=VTZ6Nq_8-jI
+---
+title: Recipe for cleaning solution to remove burned stuff from pans
+date: 2024-02-17
+published: true
+---
 
+# recipe for cleaning solution to remove burned stuff from pans
+Source:  Youtube https://www.youtube.com/watch?v=VTZ6Nq_8-jI
 
 Take 
 * bottle of coke

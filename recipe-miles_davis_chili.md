@@ -1,9 +1,15 @@
+---
+title: Miles Davis's Chili Recipe
+date: 2024-10-23
+published: true
+---
+
 # Miles Davis' Chili Recipe
 
 "... I really liked French cooking—and all the black American dishes. But my favorite was a chili dish I called Miles's South Side Chicago Chili Mack. I served it with spaghetti, grated cheese, and oyster crackers."
 Davis didn’t divulge what was in the dish or how to make it, but in 2007, Best Life magazine got the recipe from his first wife, Frances, who Davis said made it better than he did.
 
-## MILES’S SOUTH SIDE CHICAGO CHILI MACK (SERVES 6)
+## Miles'S south side Chicago Chili Mack (Serves 6)
 - 1/4 lb. suet (beef fat)
 - 1 large onion
 - 1 lb. ground beef

@@ -1,8 +1,12 @@
+---
+title: Recipe for Wendy's Frosty
+date: 2024-02-06
+published: true
+---
+
+From Jordon the Stallion
+
 # recipe for Wendy's Frosty
-
-
-
-
 
 1. half gallon chocoloate milk
 2. 14 oz sweetened condensed milk

@@ -1,13 +1,19 @@
+---
+title: Cabbage Don  or キャベツの ドンさん 
+date: 2024-04-22
+published: true
+---
+
 # cabbage don  or キャベツの ドンさん 
 
 
-sausage
+* sausage
 cook sausage separetly 
 
-cabbage
-egg
-salt
-pepper
+* cabbage
+* egg
+* salt
+* pepper
 use grater to slice off cabbage. mix in bowl with egg. 
 Put in skillet
 
@@ -17,8 +23,8 @@ add sausage, put on mustard and ketchup
 
 finely chop 
 
-onion
-pickle
+* onion
+* pickle
 add as garnish. Fold over cabbage like a pita, 
 
 

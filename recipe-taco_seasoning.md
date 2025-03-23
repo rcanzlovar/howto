@@ -1,6 +1,13 @@
+---
+title: Taco Seasoning recipe
+date: 2024-04-09
+published: true
+---
+
 # Taco Seasoning recipe
 
-Ingredients
+## Ingredients
+
 - 1 tablespoon chili powder
 - 1 ½ teaspoons ground cumin
 -  1 teaspoon sea salt
@@ -14,6 +21,7 @@ Ingredients
 mix together, put in a sealed container. 
 
 
+## Another one
 
 2 tbsp chili powder
 4 tsp cumin
