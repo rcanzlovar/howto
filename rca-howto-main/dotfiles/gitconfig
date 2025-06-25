@@ -1,0 +1,27 @@
+# https://softwaredoug.com/blog/2022/11/09/idiot-proof-git-aliases.html
+
+[user]
+	email = bob.anzlovar@wdc.com
+	name = Bob Anzlovar
+[alias]
+  # *********************
+  # Rebase workflow
+    mainbranch = "!git remote show origin | sed -n '/HEAD branch/s/.*: //p'"
+    synced = "!git pull origin $(git mainbranch) --rebase"
+    update = "!git pull origin $(git rev-parse --abbrev-ref HEAD) --rebase"
+    squash = "!git rebase -v -i $(git mainbranch)"
+    publish = push origin HEAD --force-with-lease
+    pub = publish 
+[alias]
+	smoke = !python -u '/home/rca/devtools/bin/init.py' --smoke
+	extract = !python -u '/home/rca/devtools/bin/init.py' --extract
+	gpost = !python -u '/home/rca/devtools/bin/init.py' --gpost --python 3.8
+	gerrit-gc = !python -u '/home/rca/devtools/bin/init.py' --gerrit-gc --python 3.8
+	svt = !python -u '/home/rca/devtools/bin/init.py' --svt --python 3.8
+	k8s = !sh '/home/rca/devtools/bin/k8s.sh'
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
