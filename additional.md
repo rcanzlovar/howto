@@ -23,3 +23,11 @@ Suggested packagesi with nmap:
 Suggested packages wireshark:
   snmp-mibs-downloader geoipupdate geoip-database geoip-database-extra libjs-leaflet
   libjs-leaflet.markercluster wireshark-doc
+
+
+pdfcrop: 
+Suggested packages:
+  libdbd-csv-perl liblog-dispatch-filerotate-perl librrds-perl libxml-dom-perl libencode-eucjpascii-perl libencode-hanextra-perl libpod2-base-perl default-mta | mail-transport-agent libmojolicious-perl
+  libscalar-number-perl libtest-fatal-perl perl-tk xzdec texlive-binaries-sse2 hintview chktex dvidvi dvipng fragmaster lacheck latexdiff latexmk purifyeps xindy texlive-latex-base-doc wp2latex
+  texlive-latex-recommended-doc texlive-pstricks
+

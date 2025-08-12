@@ -12,7 +12,7 @@ published: true
 
 For each quart jar: 
 
-* 400ml rye to
+* 400ml rye (about 310g more or less)
 * 225ml water in a quart jar. 
 
 PC for 90 minutes
