@@ -9,3 +9,9 @@ iwctl
  # exit
 
 
+## Install vim 
+
+First update the mirrors
+   sudo pacman -Syy
+Then install it 
+   sudo pacman -S vim 
