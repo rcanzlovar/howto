@@ -25,5 +25,14 @@ Then install it
 
    sudo pacman -Syy && sudo pacman -S xorg-xrandr 
 ## Configuring the UI
-
+* Key bindings 
 ~/.config/hypr/bindings.cngf
+
+super-k to get the current key bindings
+
+## site for icons for making web apps
+https://dashboardicons.com/icons/ycombinator
+
+## Arch overview by DHH
+
+https://youtu.be/I5Mnni7cea8?si=7_vfkbOuO3ifau0i
