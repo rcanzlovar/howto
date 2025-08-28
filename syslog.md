@@ -3,7 +3,7 @@ title: syslog to tty12
 published: true
 date: 2025-08-28 
 ---
-# syslkog to a tty
+# syslog to a tty
 
 
 *** 
@@ -19,7 +19,9 @@ rsyslog
 
 1. **Ensure  rsyslog  is installed and running:**
 ```bash
-   sudo dnf install rsyslog
+   sudo apt install rsyslog  # ubuntu
+   sudo pacman -S rsyslog # arch
+   sudo dnf install rsyslog # fedora
 
    sudo systemctl enable --now rsyslog
 
@@ -30,7 +32,10 @@ rsyslog
    Open or create a custom config file:
 ```bash
    sudo nano /etc/rsyslog.d/tty12.conf
+   sudo nano /etc/rsyslog.conf # arch linux
 ```
+
+
 
 3. **Add this line to redirect messages:**
 ```bash
@@ -55,7 +60,7 @@ Alternatively, if the configuration is in /etc/rsyslog.conf, just add the line t
 
 1. **Create a systemd service:**
 ```bash
-   sudo nano /etc/systemd/system/journal-to-tty12.service
+   sudo vim /etc/systemd/system/journal-to-tty12.service
 ```
 
 2. **Add the following content:**
