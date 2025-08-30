@@ -39,6 +39,8 @@ rsyslog
 
 This sends all log levels and facilities to `/dev/tty12`. You can fine-tune it (e.g., `*.info`, `authpriv.*`, etc.).
 
+Alternatively, if the configuration is in /etc/rsyslog.conf, just add the line to the end of the file  (i.e. Arch) 
+
 4. **Restart rsyslog :**
 ```bash
    sudo systemctl restart rsyslog
