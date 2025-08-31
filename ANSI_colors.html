@@ -1,0 +1,330 @@
+<div class="s-prose js-post-body" itemprop="text">
+<p>The ANSI escape sequences you're looking for are the Select Graphic Rendition subset. All of these have the form</p>
+<pre><code>\033[XXXm
+</code></pre>
+<p>where <code>XXX</code> is a series of semicolon-separated parameters.</p>
+<p>To say, make text red, bold, and underlined (we'll discuss many other options below) in C you might write:</p>
+<pre class="lang-c s-code-block"><code data-highlighted="yes" class="hljs language-c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">"\033[31;1;4mHello\033[0m"</span>);
+</code></pre>
+<p>In C++ you'd use</p>
+<pre class="lang-cpp s-code-block"><code data-highlighted="yes" class="hljs language-cpp">std::cout&lt;&lt;<span class="hljs-string">"\033[31;1;4mHello\033[0m"</span>;
+</code></pre>
+<p>In Python3 you'd use</p>
+<pre class="lang-py s-code-block"><code data-highlighted="yes" class="hljs language-python"><span class="hljs-built_in">print</span>(<span class="hljs-string">"\033[31;1;4mHello\033[0m"</span>)
+</code></pre>
+<p>and in Bash you'd use</p>
+<pre class="lang-bash s-code-block"><code data-highlighted="yes" class="hljs language-bash"><span class="hljs-built_in">echo</span> -e <span class="hljs-string">"\033[31;1;4mHello\033[0m"</span>
+</code></pre>
+<p>where the first part makes the text red (<code>31</code>), bold (<code>1</code>), underlined (<code>4</code>) and the last part clears all this (<code>0</code>).</p>
+<p>As described in the table below, there are a large number of text properties you can set, such as boldness, font, underlining, &amp;c.</p>
+<h1>Font Effects</h1>
+<div class="s-table-container"><table class="s-table">
+<thead>
+<tr>
+<th>Code</th>
+<th>Effect</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Reset / Normal</td>
+<td>all attributes off</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Bold or increased intensity</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Faint (decreased intensity)</td>
+<td>Not widely supported.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Italic</td>
+<td>Not widely supported. Sometimes treated as inverse.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Underline</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Slow Blink</td>
+<td>less than 150 per minute</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Rapid Blink</td>
+<td>MS-DOS ANSI.SYS; 150+ per minute; not widely supported</td>
+</tr>
+<tr>
+<td>7</td>
+<td>[[reverse video]]</td>
+<td>swap foreground and background colors</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Conceal</td>
+<td>Not widely supported.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Crossed-out</td>
+<td>Characters legible, but marked for deletion.  Not widely supported.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Primary(default) font</td>
+<td></td>
+</tr>
+<tr>
+<td>11–19</td>
+<td>Alternate font</td>
+<td>Select alternate font <code>n-10</code></td>
+</tr>
+<tr>
+<td>20</td>
+<td>Fraktur</td>
+<td>hardly ever supported</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Bold off or Double Underline</td>
+<td>Bold off not widely supported; double underline hardly ever supported.</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Normal color or intensity</td>
+<td>Neither bold nor faint</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Not italic, not Fraktur</td>
+<td></td>
+</tr>
+<tr>
+<td>24</td>
+<td>Underline off</td>
+<td>Not singly or doubly underlined</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Blink off</td>
+<td></td>
+</tr>
+<tr>
+<td>27</td>
+<td>Inverse off</td>
+<td></td>
+</tr>
+<tr>
+<td>28</td>
+<td>Reveal</td>
+<td>conceal off</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Not crossed out</td>
+<td></td>
+</tr>
+<tr>
+<td>30–37</td>
+<td>Set foreground color</td>
+<td>See color table below</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Set foreground color</td>
+<td>Next arguments are <code>5;&lt;n&gt;</code> or <code>2;&lt;r&gt;;&lt;g&gt;;&lt;b&gt;</code>, see below</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Default foreground color</td>
+<td>implementation defined (according to standard)</td>
+</tr>
+<tr>
+<td>40–47</td>
+<td>Set background color</td>
+<td>See color table below</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Set background color</td>
+<td>Next arguments are <code>5;&lt;n&gt;</code> or <code>2;&lt;r&gt;;&lt;g&gt;;&lt;b&gt;</code>, see below</td>
+</tr>
+<tr>
+<td>49</td>
+<td>Default background color</td>
+<td>implementation defined (according to standard)</td>
+</tr>
+<tr>
+<td>51</td>
+<td>Framed</td>
+<td></td>
+</tr>
+<tr>
+<td>52</td>
+<td>Encircled</td>
+<td></td>
+</tr>
+<tr>
+<td>53</td>
+<td>Overlined</td>
+<td></td>
+</tr>
+<tr>
+<td>54</td>
+<td>Not framed or encircled</td>
+<td></td>
+</tr>
+<tr>
+<td>55</td>
+<td>Not overlined</td>
+<td></td>
+</tr>
+<tr>
+<td>60</td>
+<td>ideogram underline</td>
+<td>hardly ever supported</td>
+</tr>
+<tr>
+<td>61</td>
+<td>ideogram double underline</td>
+<td>hardly ever supported</td>
+</tr>
+<tr>
+<td>62</td>
+<td>ideogram overline</td>
+<td>hardly ever supported</td>
+</tr>
+<tr>
+<td>63</td>
+<td>ideogram double overline</td>
+<td>hardly ever supported</td>
+</tr>
+<tr>
+<td>64</td>
+<td>ideogram stress marking</td>
+<td>hardly ever supported</td>
+</tr>
+<tr>
+<td>65</td>
+<td>ideogram attributes off</td>
+<td>reset the effects of all of 60-64</td>
+</tr>
+<tr>
+<td>90–97</td>
+<td>Set bright foreground color</td>
+<td>aixterm (not in standard)</td>
+</tr>
+<tr>
+<td>100–107</td>
+<td>Set bright background color</td>
+<td>aixterm (not in standard)</td>
+</tr>
+</tbody>
+</table></div>
+<h1>2-bit Colours</h1>
+<p>You've got this already!</p>
+<h1>4-bit Colours</h1>
+<p>The standards implementing terminal colours began with limited (4-bit) options. The table below lists the RGB values of the background and foreground colours used for these by a variety of terminal emulators:</p>
+<p><a href="https://i.sstatic.net/9UVnC.png" rel="nofollow noreferrer"><img src="https://i.sstatic.net/9UVnC.png" alt="Table of ANSI colours implemented by various terminal emulators"></a></p>
+<p>Using the above, you can make red text on a green background (but why?) using:</p>
+<pre><code>\033[31;42m
+</code></pre>
+<h1>11 Colours (An Interlude)</h1>
+<p>In their book "Basic Color Terms: Their Universality and Evolution", Brent Berlin and Paul Kay used data collected from twenty different languages from a range of language families to identify eleven possible basic color categories: white, black, red, green, yellow, blue, brown, purple, pink, orange, and gray.</p>
+<p>Berlin and Kay found that, in languages with fewer than the maximum eleven color categories, the colors followed a specific evolutionary pattern. This pattern is as follows:</p>
+<ol>
+<li>All languages contain terms for black (cool colours) and white (bright colours).</li>
+<li>If a language contains three terms, then it contains a term for red.</li>
+<li>If a language contains four terms, then it contains a term for either green or yellow (but not both).</li>
+<li>If a language contains five terms, then it contains terms for both green and yellow.</li>
+<li>If a language contains six terms, then it contains a term for blue.</li>
+<li>If a language contains seven terms, then it contains a term for brown.</li>
+<li>If a language contains eight or more terms, then it contains terms for purple, pink, orange or gray.</li>
+</ol>
+<p>This may be why story <em>Beowulf</em> only contains the colours black, white, and red. Homer's <em>Odyssey</em> contains black almost 200 times and white about 100 times. Red appears 15 times, while yellow and green appear only 10 times. (<a href="https://en.wikipedia.org/wiki/Linguistic_relativity_and_the_color_naming_debate" rel="nofollow noreferrer">More information here</a>)</p>
+<p>Differences between languages are also interesting: note the profusion of distinct colour words used by English vs. Chinese. However, digging deeper into these languages shows that each uses colour in distinct ways. (<a href="https://web.archive.org/web/20200324013636/http://muyueh.com/greenhoney/" rel="nofollow noreferrer">More information</a>)</p>
+<p><a href="https://i.sstatic.net/xPoHx.png" rel="nofollow noreferrer"><img src="https://i.sstatic.net/xPoHx.png" alt="Chinese vs English colour names. Image adapted from &quot;muyueh.com&quot;"></a></p>
+<p>Generally speaking, the naming, use, and grouping of colours in human languages is fascinating. Now, back to the show.</p>
+<h1>8-bit (256) colours</h1>
+<p>Technology advanced, and tables of 256 pre-selected colours became available, as shown below.</p>
+<p><a href="https://i.sstatic.net/KTSQa.png" rel="nofollow noreferrer"><img src="https://i.sstatic.net/KTSQa.png" alt="256-bit colour mode for ANSI escape sequences"></a></p>
+<p>Using these above, you can make pink text like so:</p>
+<pre><code>\033[38;5;206m     #That is, \033[38;5;&lt;FG COLOR&gt;m
+</code></pre>
+<p>And make an early-morning blue background using</p>
+<pre><code>\033[48;5;57m      #That is, \033[48;5;&lt;BG COLOR&gt;m
+</code></pre>
+<p>And, of course, you can combine these:</p>
+<pre><code>\033[38;5;206;48;5;57m
+</code></pre>
+<p>The 8-bit colours are arranged like so:</p>
+<div class="s-table-container"><table class="s-table">
+<thead>
+<tr>
+<th>Range</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x00-0x07</td>
+<td>standard colors (same as the 4-bit colours)</td>
+</tr>
+<tr>
+<td>0x08-0x0F</td>
+<td>high intensity colors</td>
+</tr>
+<tr>
+<td>0x10-0xE7</td>
+<td>6 × 6 × 6 cube (216 colors): 16 + 36 × r + 6 × g + b (0 ≤ r, g, b ≤ 5)</td>
+</tr>
+<tr>
+<td>0xE8-0xFF</td>
+<td>grayscale from black to white in 24 steps</td>
+</tr>
+</tbody>
+</table></div>
+<h1>ALL THE COLOURS</h1>
+<p>Now we are living in the future, and the full RGB spectrum is available using:</p>
+<pre><code>\033[38;2;&lt;r&gt;;&lt;g&gt;;&lt;b&gt;m     #Select RGB foreground color
+\033[48;2;&lt;r&gt;;&lt;g&gt;;&lt;b&gt;m     #Select RGB background color
+</code></pre>
+<p>So you can put pinkish text on a brownish background using</p>
+<pre><code>\033[38;2;255;82;197;48;2;155;106;0mHello
+</code></pre>
+<p>Support for "true color" terminals is listed <a href="https://gist.github.com/XVilka/8346728" rel="nofollow noreferrer">here</a>.</p>
+<p>Much of the above is drawn from the Wikipedia page "<a href="https://en.wikipedia.org/wiki/ANSI_escape_code" rel="nofollow noreferrer">ANSI escape code</a>".</p>
+<h1>A Handy Script to Remind Yourself</h1>
+<p>Since I'm often in the position of trying to remember what colours are what, I have a handy script called: <code>~/bin/ansi_colours</code>:</p>
+<pre class="lang-py s-code-block"><code data-highlighted="yes" class="hljs language-python"><span class="hljs-comment">#!/usr/bin/env python3</span>
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">30</span>, <span class="hljs-number">37</span> + <span class="hljs-number">1</span>):
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">"\033[%dm%d\t\t\033[%dm%d"</span> % (i, i, i + <span class="hljs-number">60</span>, i + <span class="hljs-number">60</span>))
+
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\033[39m\\033[49m                 - Reset color"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\\033[2K                          - Clear Line"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\\033[&lt;L&gt;;&lt;C&gt;H or \\033[&lt;L&gt;;&lt;C&gt;f  - Put the cursor at line L and column C."</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\\033[&lt;N&gt;A                        - Move the cursor up N lines"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\\033[&lt;N&gt;B                        - Move the cursor down N lines"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\\033[&lt;N&gt;C                        - Move the cursor forward N columns"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\\033[&lt;N&gt;D                        - Move the cursor backward N columns\n"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\\033[2J                          - Clear the screen, move to (0,0)"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\\033[K                           - Erase to end of line"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\\033[s                           - Save cursor position"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\\033[u                           - Restore cursor position\n"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\\033[4m                          - Underline on"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\\033[24m                         - Underline off\n"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\\033[1m                          - Bold on"</span>)
+<span class="hljs-built_in">print</span>(<span class="hljs-string">"\\033[21m                         - Bold off"</span>)
+</code></pre>
+<p>This prints</p>
+<p><a href="https://i.sstatic.net/utQ7mm.png" rel="nofollow noreferrer"><img src="https://i.sstatic.net/utQ7mm.png" alt="Simple ANSI colours"></a></p>
+    </div>
