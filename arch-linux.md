@@ -9,6 +9,8 @@ iwctl
  # exit
 
 
+## pacman
+
 ## Install packages 
 
 First update the mirrors
@@ -30,7 +32,9 @@ Then install it
 
 
    sudo pacman -Syy && sudo pacman -S xorg-xrandr 
+### query what packages are installed 
 
+`pacman -Qe `
 
 ## multihead
 [https://wiki.archlinux.org/title/Multihead](https://wiki.archlinux.org/title/Multihead)

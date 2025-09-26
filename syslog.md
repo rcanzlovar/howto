@@ -1,71 +1,52 @@
+# syslkog to a tty
+
+
+
+####################
+
+To display **syslog messages on `/dev/tty12`** in Fedora (or most systemd-based Linux systems), you can use `systemd`'s `journald` configuration or a custom `rsyslog` rule. Here's how you can set it up:
+
 ---
-title: syslog to tty12
-published: true
-date: 2025-08-28 
----
-# syslog to a tty
 
+### 🛠 Option 1: Using `rsyslog` to redirect logs to `/dev/tty12`
 
-*** 
-
-
-To display **syslog messages on `/dev/tty12`** in Fedora (or most systemd-based Linux systems), you can use `systemd`'s `journald` configuration or a custom `
-rsyslog
-` rule. Here's how you can set it up:
-
-*** 
-
-### 🛠Option 1: Using  rsyslog  to redirect logs to `/dev/tty12`
-
-1. **Ensure  rsyslog  is installed and running:**
-```bash
-   sudo apt install rsyslog  # ubuntu
-   sudo pacman -S rsyslog # arch
-   sudo dnf install rsyslog # fedora
-
+1. **Ensure `rsyslog` is installed and running:**
+   ```bash
+   sudo dnf install rsyslog
    sudo systemctl enable --now rsyslog
-
-```
+   ```
 
 2. **Edit the rsyslog configuration:**
-
    Open or create a custom config file:
-```bash
+   ```bash
    sudo nano /etc/rsyslog.d/tty12.conf
-   sudo nano /etc/rsyslog.conf # arch linux
-```
-
-
+   ```
 
 3. **Add this line to redirect messages:**
-```bash
-*.* /dev/tty12
-```
+   ```bash
+   *.* /dev/tty12
+   ```
 
-This sends all log levels and facilities to `/dev/tty12`. You can fine-tune it (e.g., `*.info`, `authpriv.*`, etc.).
+   This sends all log levels and facilities to `/dev/tty12`. You can fine-tune it (e.g., `*.info`, `authpriv.*`, etc.).
 
-Alternatively, if the configuration is in /etc/rsyslog.conf, just add the line to the end of the file  (i.e. Arch) 
-
-4. **Restart rsyslog :**
-```bash
+4. **Restart rsyslog:**
+   ```bash
    sudo systemctl restart rsyslog
+   ```
 
-```
+---
 
-*** 
-
-### 🛠Option 2: Using `systemd-journald` (less direct)
+### 🛠 Option 2: Using `systemd-journald` (less direct)
 
 `journald` doesn't natively support output to TTYs, but you can use a small script or service that tails the journal and writes to `/dev/tty12`.
 
 1. **Create a systemd service:**
-```bash
-   sudo vim /etc/systemd/system/journal-to-tty12.service
-```
+   ```bash
+   sudo nano /etc/systemd/system/journal-to-tty12.service
+   ```
 
 2. **Add the following content:**
-
-```ini
+   ```ini
    [Unit]
    Description=Journal to TTY12
    After=multi-user.target
@@ -76,18 +57,17 @@ Alternatively, if the configuration is in /etc/rsyslog.conf, just add the line t
 
    [Install]
    WantedBy=multi-user.target
-```
+   ```
 
 3. **Enable and start the service:**
-
-```bash
+   ```bash
    sudo systemctl daemon-reexec
    sudo systemctl enable --now journal-to-tty12.service
-```
+   ```
 
-*** 
+---
 
-### ✅Final Step: Switch to TTY12
+### ✅ Final Step: Switch to TTY12
 
 Use `Ctrl+Alt+F12` to switch to TTY12 and view the logs.
 
@@ -98,13 +78,13 @@ Would you like help filtering specific log types (e.g., only kernel or auth logs
 
 
 
-## filtering messages
+## filtering messages 
 
 Great question! Filtering syslog messages effectively depends on what you're trying to monitor or troubleshoot. Syslog messages are categorized by **facilities** and **priorities (levels)**. Here's a breakdown to help you decide what types you might want to filter by:
 
 ---
 
-### 🏷️**Syslog Facilities** (types of sources)
+### 🏷️ **Syslog Facilities** (types of sources)
 
 These indicate where the message originated:
 
@@ -122,7 +102,7 @@ These indicate where the message originated:
 
 ---
 
-### 🚦**Syslog Priorities (Levels)**
+### 🚦 **Syslog Priorities (Levels)**
 
 These indicate the severity of the message:
 
@@ -137,71 +117,45 @@ These indicate the severity of the message:
 | `info`    | Informational messages    |
 | `debug`   | Debug-level messages      |
 
-*** 
+---
 
-##a #🔍Examples of Useful Filters
+### 🔍 Examples of Useful Filters
 
 - **Monitor authentication attempts:**
-``bash
+  ```bash
   authpriv.* /dev/tty12
-```
+  ```
 
 - **Watch for kernel issues:**
-```bash
+  ```bash
   kern.* /dev/tty12
-```
+  ```
 
 - **Only show warnings and errors:**
-``bash
+  ```bash
   *.warn /dev/tty12
-``
+  ```
 
 - **Debugging a specific daemon:**
-```bash
+  ```bash
   daemon.debug /dev/tty12
-```
+  ```
 
-*** 
+---
 
-### 🧪Tip: Test What’s Being Logged
+### 🧪 Tip: Test What’s Being Logged
 
 You can run:
-
 ```bash
 logger -p authpriv.info "Test auth message"
 logger -p kern.warning "Test kernel warning"
 ```
-
 Then check `/dev/tty12` to see what appears.
 
 Would you like help setting up a filter for a specific service you're troubleshooting (e.g., SSH, networking, cron)?
 
 
-Thanks! To help you filter syslog messages for a specific service you're troubleshooting, I just need to know which service or system component you're interested in.
-
-Here are some common examples you might want to monitor:
-
-🔐 SSH (e.g., login attempts, failed authentications)
-🌐 Network (e.g., DHCP, NetworkManager, connectivity issues)
-🕒 Cron jobs (e.g., scheduled task execution)
-🧱 Firewall (e.g., firewalld, iptables)
-🧩 Systemd services (e.g., failed units, restarts)
-🧮 Audit logs (e.g., SELinux, access control)
-🖥️ Hardware events (e.g., disk, memory, CPU)
-Let me know which one you're focusing on, and I’ll help you set up the right filter for /dev/tty12 or another destination.
 
 
-Thanks! To help you filter syslog messages for a specific service you're troubleshooting, I just need to know which service or system component you're interested in.
 
-Here are some common examples you might want to monitor:
-
-🔐 SSH (e.g., login attempts, failed authentications)
-🌐 Network (e.g., DHCP, NetworkManager, connectivity issues)
-🕒 Cron jobs (e.g., scheduled task execution)
-🧱 Firewall (e.g., firewalld, iptables)
-🧩 Systemd services (e.g., failed units, restarts)
-🧮 Audit logs (e.g., SELinux, access control)
-🖥️ Hardware events (e.g., disk, memory, CPU)
-Let me know which one you're focusing on, and I’ll help you set up the right filter for /dev/tty12 or another destination.
-
-
+Bob Anzlovar (rcanzlovar at gmail)
