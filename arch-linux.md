@@ -57,3 +57,23 @@ https://dashboardicons.com/icons/ycombinator
 ## Arch overview by DHH
 
 https://youtu.be/I5Mnni7cea8?si=7_vfkbOuO3ifau0i
+## Customizations
+
+To set the default font size in alacritty
+
+to set the default magification in chrome/chromium:
+~/.config/chromium-flags.conf
+~/.config/chrome-flags.conf
+
+`--force-device-scale-factor=1.0`
+
+
+### omarchy logo
+
+/etc/mkinitcpio.d🔒 ❯ gimp  /usr/share/plymouth/themes/omarchy/logo.png^C
+
+
+
+## Set up monitors
+
+https://wiki.hypr.land/Configuring/Monitors/
