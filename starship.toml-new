@@ -1,0 +1,44 @@
+format = """
+[░▒▓](#c7ebc9)\
+$time[▓▒░](#c7ebc9)\
+\n$username$hostname[ 󰣇 ](bg:#04820c fg:#FFFFFF)\
+[](fg:#04820c bg:#95f09a)\
+$directory[](fg:#95f09a)\
+\n$character"""
+
+#[ 󰣇 ](bg:#678DCD fg:#090c0c)\
+#
+[directory]
+style = "fg:#000000 bg:#95f09a"
+format = "[ $path ]($style)"
+truncation_length = 4
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 Documents"
+"Downloads" = " Downloads "
+"music" = " "
+"Music" = "  Music "
+"Pictures" = " Pictures "
+"games" = " "
+"desktop" = " "
+
+[username]
+show_always = true
+style_user = "bg:#04820c fg:#FFFFFF"
+format = '[ $user@]($style)'
+disabled = false
+
+[hostname]
+ssh_only = false
+disabled = false
+style = "bg:#04820c fg:#FFFFFF"
+format = '[$hostname]($style)'
+
+[time]
+disabled = false
+#time_format = "%T" # Hour:Minute Format
+time_format = "%e-%b-%Y %H:%M" # Hour:Minute Format
+#style = "bg:#C4B5A0"
+#format = '[[  $time ](fg:#050301 bg:#6666FF)]($style)'
+format = '[[  $time ](fg:#000000 bg:#c7ebc9)]($style)'
