@@ -1,3 +1,10 @@
+---
+title: flipper faps
+date: 2025-10-04
+published: true
+keywords: [flipper zero]
+---
+
 # Making faps for flipper
 
 

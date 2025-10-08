@@ -1,21 +1,32 @@
+---
+title: fstab modifications
+date: 2025-10-04
+published: true
+keywords: [fstab]
+---
+
 
 
 
 $ sudo mount -a 
 
 
-if you changed fstab, you mignt need to 
+if you changed fstab, you mignt need to  reload
 ```
 
 systemctl daemon-reload
 ```
- to reload.
-nstall the NFS hooks so you can do the nfs mount in the fstab below
+
+
+Install the NFS hooks so you can do the nfs mount in the fstab below
+
 ```
 sudo apt install nfs-common 
 ```
 
 
+```
+```
 # /etc/fstab: static file system information.
 #
 # Use 'blkid' to print the universally unique identifier for a
@@ -35,4 +46,6 @@ UUID=52ec2e6e-c9b5-4cbb-a9b6-6bf82a4d6316 /home           ext4    defaults      
 192.168.1.21:/volume1/Media /Media nfs auto,defaults,nofail 0 0
 #192.168.1.21:/volume1/Commons /home/rca/Commons nfs auto,defaults,nofail 0 0
 #192.168.1.21:/volume1/Commons /home/boba/Commons nfs auto,defaults,nofail 0 0
+dd
+```
 

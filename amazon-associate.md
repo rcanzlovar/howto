@@ -1,4 +1,9 @@
-# amazon associate info
+---
+title: amazon associate info
+date: 2025-10-04
+published: false
+keywords: [amazon-aws]
+---
 
 
 

@@ -1,3 +1,10 @@
+---
+title: Arch Wifi
+date: 2025-10-04
+published: true
+keywords: [arch, iwctl]
+---
+
 
 ## connect wifi
 

@@ -1,5 +1,12 @@
+---
+title: Mycoloogy tidbits
+date: 2025-10-04
+published: true
+keywords: [mycology]
+---
 
 
+## Reusable petri dishes
 
 reusble petri plates:
 

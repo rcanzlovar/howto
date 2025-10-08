@@ -1,3 +1,10 @@
+---
+title: django notes
+date: 2025-10-04
+published: true
+keywords: [django,localwebserver]
+---
+
 # django
 
 How to access the local Django webserver from outside world

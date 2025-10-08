@@ -1,3 +1,10 @@
+---
+title:  how to install developer tools for Firefox on phone 
+date: 2025-10-04
+published: true
+keywords: [firefox,]
+---
+
 # how to install developer tools for Firefox on phone 
 
 Although I didn't want this to be a tutorial, I still want to teach you guys how to get these features on your mobile, in case you need them, because sometimes computers are not an option.

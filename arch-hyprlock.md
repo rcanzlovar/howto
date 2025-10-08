@@ -1,3 +1,10 @@
+---
+title:  Arch Hyprland notes
+date: 2025-10-04
+published: true
+keywords: [arch, hyprland]
+---
+
 # Hyprland lock doesn't come back 
 
 

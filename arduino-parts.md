@@ -1,3 +1,10 @@
+---
+title: Arduino parts
+date: 2025-10-04
+published: true
+keywords: [arduino]
+---
+
 
 ### KY66 Servo 
 https://www.youtube.com/watch?v=jsXolwJskKM demonstrates how to make the movements smooth

@@ -1,5 +1,12 @@
+---
+title:  ansible cookbook
+date: 2025-10-04
+published: true
+keywords: [ansible]
+---
 
-# ansible cookbook
+
+
 
 
 ## To do an ad hoc apt install on one host

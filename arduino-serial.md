@@ -1,4 +1,10 @@
-# arduino serial port notes
+---
+title: arduino serial port notes
+date: 2025-10-04
+published: false
+keywords: []
+---
+
 
 
 When the device is plugged in, it creates two devices

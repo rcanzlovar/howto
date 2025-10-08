@@ -1,4 +1,10 @@
-# Things to add to your weed
+---
+title:  Things to add to your weed
+date: 2025-10-04
+published: true
+keywords: [cannabis, herbs]
+---
+
 
 These are some herbs to add to your smoking mixture
 

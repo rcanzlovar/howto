@@ -1,3 +1,10 @@
+---
+title: Foliate ebook 
+date: 2025-10-04
+published: true
+keywords: [ebooks]
+---
+
 
 
 ## install with flatpak

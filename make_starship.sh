@@ -3,44 +3,87 @@
 #
 echo "use the template in $0"
 
-# these are the colors used below
-# color1 -s the little widgets on either side of the time
-color1="#d9e864"
+if [ $(hostname) == "archlinux" ]; then
+    # red and yelows
+    #
+    COLOR1="#f2de02"
 
-# colors for the time
-timebg="#afc40e"
-timefg="#4e05eb"
+    TIMEFG="#000000"
+    TIMEBG="#c7ebc9"
 
-# colors for the directory
-directoryfg="#FF0000"
-directorybg='#95f09a' 
+    HOSTNAMEBG="#a71a1a"
+    HOSTNAMEFG="white"
 
-#colors for the hostname
-hostnamefg="#f5cece"
-hostnamebg="#04820c"
+    DIRECTORYFG="white"
+    DIRECTORYBG="#c26310"
 
-# use the same colors for the hostname for user automatically
-userbg=$hostnamebg
-userfg=$hostnamefg
+    USERBG="#a71a1a"
+    USERFG="#white"
 
+    HOSTNAMEFG="#000000"
+    HOSTNAMEBG="#F8bc07"
+elif [ $(hostname) == "halarchie" ]; then
+    # these are the colors used below
+    # color1 -s the little widgets on either side of the time
+    COLOR1="#d9e864"
 
+    # colors for the time
+    TIMEBG="#afc40e"
+    TIMEFG="#4e05eb"
+
+    # colors for the directory
+    DIRECTORYFG="#FF0000"
+    DIRECTORYBG='#95f09a'
+
+    #colors for the hostname
+    HOSTNAMEFG="#f5cece"
+    HOSTNAMEBG="#04820c"
+
+    # use the same colors for the hostname for user automatically
+    USERBG=$HOSTNAMEBG
+    USERFG=$HOSTNAMEFG
+elif [ $(hostname) == "archnuc" ]; then
+    # these are the colors used below
+    # color1 -s the little widgets on either side of the time
+    COLOR1="#d9e864"
+
+    # colors for the time
+    TIMEBG="#afc40e"
+    TIMEFG="#4e05eb"
+
+    # colors for the directory
+    DIRECTORYFG="#FF0000"
+    DIRECTORYBG='#95f09a'
+
+    #colors for the hostname
+    HOSTNAMEFG="#f5cece"
+    HOSTNAMEBG="#04820c"
+
+    # use the same colors for the hostname for user automatically
+    USERBG=$HOSTNAMEBG
+    USERFG=$HOSTNAMEFG
+else
+
+    echo "not colors for this host"
+    exit
+fi
 # now make the change
 sed \
-  -e "s/COLOR1/$color1/g" \
-  \
-  -e "s/TIMEBG/$timebg/g" \
-  -e "s/TIMEFG/$timefg/g" \
-  \
-  -e "s/DIRECTORYBG/$directorybg/g" \
-  -e "s/DIRECTORYFG/$directoryfg/g" \
-  \
-  -e "s/USERBG/$userbg/g" \
-  -e "s/USERFG/$userfg/g" \
-  \
-  -e "s/HOSTNAMEBG/$hostnamebg/g" \
-  -e "s/HOSTNAMEFG/$hostnamefg/g" \
-  >~/.config/starship.toml \
-  <$(dirname "$0")/starship.toml-TEMP 
+    -e "s/COLOR1/$COLOR1/g" \
+    \
+    -e "s/TIMEBG/$TIMEBG/g" \
+    -e "s/TIMEFG/$TIMEFG/g" \
+    \
+    -e "s/DIRECTORYBG/$DIRECTORYBG/g" \
+    -e "s/DIRECTORYFG/$DIRECTORYFG/g" \
+    \
+    -e "s/USERBG/$USERBG/g" \
+    -e "s/USERFG/$USERFG/g" \
+    \
+    -e "s/HOSTNAMEBG/$HOSTNAMEBG/g" \
+    -e "s/HOSTNAMEFG/$HOSTNAMEFG/g" \
+    >~/.config/starship.toml \
+    <$(dirname "$0")/starship.toml-TEMP
 exit
 #sed \
 #  -e 's/COLOR1/#f2de02/g' \

@@ -1,3 +1,10 @@
+---
+title: Jetson Nano setup
+date: 2025-10-04
+published: true
+keywords: [jetson nano]
+---
+
  # Things to do when starting up a new getson nano
 
 

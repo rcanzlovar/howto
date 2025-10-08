@@ -1,4 +1,10 @@
-# bash tricks
+---
+title: bash tricks
+date: 2025-10-04
+published: true
+keywords: [bashi, grep]
+---
+
 
 
 ### Copying files that have spaces in them

@@ -1,3 +1,10 @@
+---
+title: enochian class
+date: 2025-10-04
+published: true
+keywords: [enochian, occult]
+---
+
 # Prayers Attributed to Dr. John Dee
 John Dee's Daily Oration for Wisdom from The First Book ofthe Mysteriesi
 

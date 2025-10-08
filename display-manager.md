@@ -1,3 +1,10 @@
+---
+title: display manager
+date: 2025-10-04
+published: true
+keywords: [xwindows]
+---
+
 
 
 

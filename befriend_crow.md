@@ -1,4 +1,10 @@
-# How to befriend a crow
+---
+title: How to befriend a crow
+date: 2025-10-04
+published: true
+keywords: []
+---
+
 
 To befriend a crow, one must approach the endeavor with patience and a gentle hand. Nothing can be rushed, as it is entirely up to the crow to decide the pace and depth of the relationship.
 

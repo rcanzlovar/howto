@@ -1,3 +1,10 @@
+---
+title: deepspeech
+date: 2025-10-04
+published: true
+keywords: [deepspeech, ai]
+---
+
 # deepspeech notes
 
 

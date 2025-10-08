@@ -1,3 +1,10 @@
+---
+title: Arch grab bag
+date: 2025-10-04
+published: true
+keywords: [arch]
+---
+
 
 ## connect wifi
 
@@ -73,7 +80,17 @@ to set the default magification in chrome/chromium:
 /etc/mkinitcpio.d🔒 ❯ gimp  /usr/share/plymouth/themes/omarchy/logo.png^C
 
 
+## change size of the waybar 
+edit ~/.config/waybar
+
+## connect bluetooth 
+
+install blueberry app. requires mouse
 
 ## Set up monitors
 
 https://wiki.hypr.land/Configuring/Monitors/
+
+## mount the phone 
+
+❯         sudo pacman -S gvfs-mtp^C
