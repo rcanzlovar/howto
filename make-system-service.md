@@ -1,3 +1,10 @@
+---
+title: Make a systemd recurring service
+date: 2025-10-13
+published: true
+keywords: [ linux ]
+---
+
 To create a recurring task with `systemctl`, you must create two unit files: a `.service` file that defines the task and a `.timer` file that schedules it. First, create the `.service` file to define the command to be executed. Then, create a matching `.timer` file in the same directory to schedule the service, using options like `OnCalendar` or `OnBootSec`. Finally, reload the `systemd` daemon, enable and start the timer, and use `systemctl list-timers --all` to verify its status. 
 
 Step 1: Create the service unit file

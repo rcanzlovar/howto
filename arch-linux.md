@@ -39,9 +39,22 @@ Then install it
 
 
    sudo pacman -Syy && sudo pacman -S xorg-xrandr 
-### query what packages are installed 
+### query what AUR packages are installed 
 
-`pacman -Qe `
+pacman -Q: Query the package database.
+
+-e: Lists only packages that were explicitly installed (not dependencies).
+
+-m: Lists only "foreign" packages (those not in a pacman repo, which means AUR). Use to get the yay packages
+
+-q: "Quiet" mode, which lists only the package names, with no version numbers.
+
+`pacman -Qeq `
+
+Reinstall with this command: 
+
+
+`awk '{print $1}' package-list.txt | sudo pacman -S --needed -`
 
 ## multihead
 [https://wiki.archlinux.org/title/Multihead](https://wiki.archlinux.org/title/Multihead)
