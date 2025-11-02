@@ -15,7 +15,7 @@ if [ $(hostname) == "archlinux" ]; then
   HOSTNAMEFG="white"
 
   DIRECTORYFG="#a6464d"
-  DIRECTORYBG="#f7ef07"
+  DIRECTORYBG="#f7bb07"
 
   USERBG="#a71a1a"
   USERFG="white"
