@@ -1,3 +1,47 @@
+--- 
+title: Git Notes
+date: 2025-12-05
+published: true 
+heywords: howto 
+---
+
+## cheatsheet 
+
+git diff --staged 
+shows what is changed in the things that have been added. 
+
+
+git restore --staged FILENAME 
+unstages a file that you have added but not committed
+
+git commit -m "update  a file quickly" foo.txt 
+does it all in one step  - not useful for new files 
+
+### git switch
+git switch --detacu <first 4 digits of a commit number> 
+pulls out a previous commit so you can look at it 
+
+git switch - 
+toggles to the last one 
+git switch main 
+goes back to main 
+
+git checkout 
+
+git checkout foo 
+combines git branch and git switch 
+
+
+git checkout -b branchname 
+does both branch / checkout and switch at once 
+
+
+
+
+
+
+
+
 
 
 # Git
