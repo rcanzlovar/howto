@@ -53,3 +53,21 @@ command! CleanFbUrl %s/^.*u=\([^&]*\)&.*$/\1/ | %!python3 -c "import sys, urllib
 
 
 " rerun vimrc :so ~/.vimrc
+
+## substution 
+
+To change (99) to 99. in Vim, use the substitute command i
+
+```
+:%s/(\([0-9]\+\))/\1./g.
+
+
+As detailed on Linuxize, Vim uses the :s command for finding and replacing text.
+
+### How the Command Works
+
+* % applies the command to the entire file.
+* (\([0-9]\+\)) searches for an opening parenthesis, followed by one or more numbers (which are saved in a capture group), followed by a closing parenthesis.
+* \1. replaces the match with the captured number (\1) and adds a dot . after it.
+* g ensures every occurrence on a line is changed.
+
